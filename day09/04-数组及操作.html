@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 定义数组
+        var aList1= new Array(1,2,3,4);
+        // 字面量方式创建
+        var aList2=[1,2,3,4];
+        console.log(aList1);
+
+        // 多维数组
+        var aList3=[[1,2,3,4],[1,23]];
+
+        // 根据下标获取数据
+        alert(aList3[0][1]);
+
+        // 相关数字
+        var aList4=[3,6,9];
+        // 获取数组的长度
+        alert(aList4.length);
+        // 根据下标取值
+        var oValue = aList4[0];
+        alert(aList4[2])
+        console.log(oValue)
+        // js不支持负数下标
+        // console.log(aList4[-1])  显示为undefined
+
+        // 根据下标修改数据
+        aList4[1] = 26
+        console.log(aList4)
+        // 追加数据
+        aList4.push(5);
+        console.log(aList4)
+
+        // 删除最后一个元素，这里pop不支持下标删除
+        aList4.pop()
+        console.log(aList4)
+
+        // 插入数据
+        // 1.开始删除的索引
+        // 2.删除的个数
+        // 3.插入的数据
+        aList4.splice(0,0,"苹果","香蕉");
+        console.log(aList4);
+        // 表示从下标为0开始，删除两个数据
+        aList4.splice(1,2)
+        console.log(aList4)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

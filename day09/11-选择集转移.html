@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 根据选择的标签为参照物，选择其他其他标签 -->
+    <script src="js/jquery-1.12.4.min.js"></script>
+
+    <script>
+        // 找到参照标签
+        $(function(){
+            var $div=$("#box1");
+
+            // 选择上一个同级标签
+            $div.prev().css({"background":"red"});
+            // 选择上面所有的同级标签
+            $div.prevAll().css({"text-indent":"50px"});
+            // 选择下一个同级标签
+            $div.next().css({"background":"blue"});
+            // // 选择下面所有的同级标签
+            $div.nextAll().css({"text-indent":"200px"});
+
+            // 选择其他标签
+            $div.siblings().css({"text-decoration":"underline"});
+
+            // 选择父标签
+            $div.parent().css({"background":"gray"});
+
+            // 选择子标签
+            $div.children().css({"color":"red"});
+
+            // 查找标签
+            $div.find(".pname").css({"color":"yellow"});
+            
+        })
+
+
+        // jquery选择器和css选择使用的规则是一样的，类要用.  id要用#
+
+        
+    </script>
+</head>
+<body>
+    <div>
+        <h3>三级标题</h3>
+        <p>哈哈</p>
+        <div id="box1"><span>我是</span>一个<span class="pname">div</span>标签</div>
+        <h3>三级标题</h3>
+        <p>哈哈</p>
+
+    </div>
+    
+</body>
+</html>

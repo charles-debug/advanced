@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // // 一次定时器
+        // function fnShow(name, age){
+        //     alert('ok!'+name+age);
+        //     alert(tId)
+        //     // 销毁定时器用clearTimeout 参数选用定时器的ID
+        //     clearTimeout(tId)
+        // };
+        // // setTimeout(fnShow, 2000);
+        // // 返回值显示的是定时器的ID，表示创建的是第几个定时器
+        // var tId = setTimeout(fnShow,2000,'李四',22);
+
+        // 重复定时器
+        function fnShow(name,age){
+            alert('ok'+name+age);
+        };
+        function fnStop(){
+            // alert(tId);
+            // 销毁定时器
+            clearInterval(tId);
+        };
+        var tId = setInterval(fnShow,3000,'李四', 22);
+
+    </script>
+</head>
+<body>
+    <input type="button", value="停止", onclick="fnStop();">
+</body>
+</html>

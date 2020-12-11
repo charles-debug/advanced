@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        // 获取标签
+        $(function(){
+            var $p = $("p");
+            alert($p.length);
+        });
+        // 根据类选择
+        $(function(){
+            var $div = $(".div1");
+            alert($div.length);
+        })
+        // 根据id选取标签
+        $(function(){
+            var $box =$("#box1");
+            alert($box.length);
+        })
+
+        // 根据层级选取标签
+        $(function(){
+            var $h1=$("div h1");
+            alert($h1.length);
+        })
+
+        // 属性选择是先根据标签选择html，然后再根据属性值过滤标签
+        $(function(){
+            var $type = $("input[type=text]");
+            alert($type.length);
+        })
+
+        // 结论：jquery选择器选取标签和css 样式选取标签的规则是一样的
+
+    </script>
+</head>
+<body>
+    <p>哈哈</p>
+    <p>哈哈</p>
+    <div class="div1">吱吱</div>
+    <div id="box1">嘻嘻</div>
+
+    <div>
+        <h1>
+            这是一级标题
+        </h1>
+    </div>
+
+    <input type="text">
+    <input type="button" value="确认">
+</body>
+</html>

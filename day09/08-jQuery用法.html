@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 导入对应jquery文件 -->
+    <script src='js/jquery-1.12.4.min.js'></script>
+    <!-- 使用jquery里面的函数需要重新开一个标签 -->
+    <script>
+        // js的原生写法
+        window.onload = function(){
+            var oDiv = document.getElementById('div1');
+            alert(oDiv);
+        }
+
+        // $符号就是jquery的象征
+        // $就表示一个函数，只不过函数名就叫$
+        // $(document).ready(function(){
+        //     // 获取标签和css样式匹配标签的规则一样
+        //     // 以后使用jquery，变量名都要以$符号开头
+        //     var $Div = $('#Div1');
+        //     alert($Div)
+        // });
+
+        // jquery的简写
+        $(function(){
+            var $Div = $('#Div1');
+            alert($Div);
+        });
+    </script>
+</head>
+<body>
+    <div id="div1">哈哈</div>
+</body>
+</html>
