@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 定义局部变量
+        // function fnNum(){
+        //     var iNum=12;
+        //     alert(iNum)
+
+        // }
+        // fnNum()
+        // Uncaught ReferenceError: iNum is not defined
+        // at 15-局部变量和全局变量使用.html:16
+        // 局部变量不能函数外使用
+        // alert(iNum)
+
+        // 定义全局变量
+        // 在函数外定义的变量，在不同函数中可以使用 并且不同函数可以共享全局变量
+        var iNum1 = 1;
+
+        function fnShow(){
+            alert(iNum1);
+            iNum1=3;
+            // ++ 就等价于+=1 在js中两种都可以使用
+            iNum1 ++;
+            iNum1+=1;
+            alert(iNum1);
+        }
+
+        fnShow()
+        // js可以字符串类型和数字类型直接相加，将数字自动转成字符串
+
+        alert("在函数外的变量为：" +iNum1)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

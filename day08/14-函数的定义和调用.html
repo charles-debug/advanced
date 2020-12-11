@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 定义函数的关键字是function
+        function fnShow(){
+            alert("我是一个无参数无返回值的函数");
+        }
+        fnShow()
+
+        // 定义一个有参数又返回值得函数
+        function fnSum(iNum1, iNum2){
+            var iSum=iNum1+iNum2;
+            return iSum;
+            alert("测试代码");
+        }
+
+        var iRs=fnSum(2,3);
+        alert(iRs);
+
+
+        //  return的特点是：1：为函数返回值  
+        //                 2：return后的代码不能执行
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 定义数字类型
+        var iNum=1;
+        var fNum=2.5;
+        // 定义字符串
+        var sName="李四"
+        // alert(iNum);
+        // alert(fNum);
+        // alert(sName);
+        alert(typeof(iNum));
+        alert(typeof(fNum));
+        alert(typeof(sName));
+        // 定义布尔型
+        var bIsTrue = false;
+        alert(bIsTrue);
+        // 定义undefined类型
+        var unData;
+        alert(typeof(unData))
+
+        // 定义null类型
+        var oData=null;
+        alert(typeof(oData));
+        // 这是历史原因，由于一开始没有null类型，将之归属于object类型，后续语言迭代后也没有进行修改，null值属于null类型
+        // 定义javascript对象类型
+        var oPerson={
+            name:"王五",
+            age:20
+        }
+        alert(typeof(oPerson));
+        alert(oPerson.name)
+        console.log(oPerson.name)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

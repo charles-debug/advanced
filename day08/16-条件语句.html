@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var iNum = 5;
+        var sNum = '5';
+
+        if(iNum == sNum){
+            // 在js里面数字和字符串比较时，会自动把字符串类型转化成数字进行比较
+            alert('条件成立');
+        }
+
+        if (iNum<sNum){
+            alert('条件成立');
+        }else{
+            alert('条件不成立');
+        }
+
+        var iScore=90;
+
+        if(iScore<60){
+            alert('不合格，回去好好学习');
+        }else if(iScore<=80){
+            alert('一般般');
+
+        }else{
+            alert('优秀');
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

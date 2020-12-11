@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 层级选择器要有层级关系 根据层级关系选择子标签*/
+
+        div div{
+            color: yellow;
+        }
+
+        div .box{
+            color: violet;
+        }
+        /* div div p{
+            color: turquoise;
+        } */
+        div p{
+            color: yellowgreen;
+        }
+        /* 也可以直接通过子孙节点使用对应的选择器 */
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            hello world
+        </div>
+        <div class="box">嘻嘻</div>
+    </div>
+
+    <div>嘻嘻</div>
+
+    <div>
+        <div>
+            <p>这是一个子孙标签节点</p>
+        </div>
+    </div>
+</body>
+
+</html>
