@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+
+    <script>
+        $.post("data.json",{"name":"ls"},function(data){
+            // 如果按照json数据进行解析，那么可以得到一个javascript对象
+            alert(data.name);
+        },"JSON").error(function(){
+            alert("请求失败");
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

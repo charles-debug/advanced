@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 创建对象有两种方式
+        // 1.通过顶级object类型创建
+        var oPerson = new Object();
+        // 设置属性
+        oPerson.name = "李四";
+        oPerson.age = 20;
+
+        alert(oPerson.name+oPerson.age);
+        oPerson.show = function () {
+            alert("我是一个好人");
+        };
+        oPerson.show()
+        // 2.通过字面量创建
+        var oStudent = {
+        //    属性
+            name:"李四",
+            age:200,
+            // 方法
+            show:function(){
+                alert("我是一个好学生")
+            }
+        };
+
+        alert(oStudent.name);
+        oStudent.show();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

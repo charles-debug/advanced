@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+
+    <script>
+        $(function(){
+            // 获取标签
+            var $p=$("#p1");
+            var $btn=$("#btn1");
+            var $div=$("#box1");
+            // var $ul=$("div ul")
+
+            $btn.click(function(){
+                alert("我是按钮");
+                // 扩展：若要接触时间冒泡，需要
+                return false;
+            });
+
+            $div.click(function(){
+                alert("我是一个div");
+            });
+
+            // 点击btn控件所绑定的时间，其父级元素的事件也会触发，这种情况 就叫时间冒泡
+
+            // 事件代理
+            // 通过对父标签绑定然后出发子元素的控件
+
+            $div.delegate("ul li","click", function(){
+                alert('ok!');
+                $(this).css({"color":"red"});
+            });
+
+            // 扩展：可以代理不同子控件的事件
+            var $div1=$("#box2")
+            // 扩展：可以代理不同子控件的事件,不同的选择器之间用逗号分隔开
+            $div1.delegate("#p2, #btn2", "click",function(){
+                alert("事件代理");
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div id="box1">
+        <p id="p1">哈哈</p>
+        <input type="button" value="按钮" id="btn1">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+
+    <div id="box2">
+        <p id="p2">哈哈</p>
+        <input type="button" value="按钮" id="btn2">
+    </div>
+</body>
+</html>

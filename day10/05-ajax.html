@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+
+    <script>
+        // $.ajax({
+        //     // 请求的资源地址，不表明ip和端口号表示的是请求的是自己的服务器的资源
+        //     url:"data.json",
+        //     // 请求方式：post get
+        //     type:"GET",
+        //     // 制定对服务器的解析格式
+        //     dataType:"JSON",
+        //      data:{"name":"ls"}
+        //     // 请求成功执行的函数
+        //     success:function(data){
+        //         console.log(data);
+        //     },
+        //     // 请求失败时执行的函数
+        //     error:function(){
+        //         alert("请求失败");
+
+        //     },
+        //     // 是否异步，默认不指定表示异步请求
+        //     async:true
+        // });
+
+        // ajax的get方式请求可以简写为
+        // 1.请求的地址
+        // 2.请求的参数
+        // 3.请求成功的回调函数
+        // 4.解析的数据格式
+        // 5.请求失败的回调函数
+        $.get("data.json",{"name":"ls"},function(data){
+            // 如果按照json数据进行解析，那么可以得到一个javascript对象
+            alert(data.name);
+        },"JSON").error(function(){
+            alert("请求失败");
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

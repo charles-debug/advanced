@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+
+    <script>
+
+        // 每一个事件其实就是一个方法，类似于ready，然后往里面传匿名函数
+
+
+        // 获取对应的标签
+        // $(document).ready(function(){
+
+        // });
+        // 简写版
+        $(function(){
+            var $lis=$("ul li");
+            var $btn=$("#btn1");
+            var $txt=$("#txt1");
+            var $div=$("div")
+            $lis.click(function(){
+                // 原生的js写法
+                // this.style.color = "red";
+                $(this).css({"color":"red"});
+                // 获取点击标签的索引
+                alert($(this).index());
+            });
+
+            $btn.click(function(){
+                // 获取文本框的内容
+                alert($txt.val());
+
+            });
+
+            // 给文本框添加焦点事件
+            $txt.focus(function(){
+                $(this).css({"background":"red"});
+            });
+
+            // 让文本框失去焦点
+            $txt.blur(function(){
+                $(this).css({"background":"white"});
+            });
+
+            // 设置鼠标(悬停)进入事件
+            $div.mouseover(function(){
+                $(this).css({"background":"green"});
+            });
+
+            // 设置鼠标离开事件
+            $div.mouseout(function(){
+                $(this).css({"background":"white"});
+            })
+        });   
+    </script>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>苹果</li>
+            <li>香蕉</li>
+            <li>梨</li>
+        </ul>
+        <input type="text" id="txt1">
+        <input type="button" id="btn1" value="点击">
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- web服务器把json数据传给浏览器，当js解析json时候为了方便，把json数据解析成了一个javascript对象 -->
+    <script>
+        //  json本质上就是一个字符串，同时还是一种数据格式
+        // 一种是对象格式
+        // 一种是数组格式
+
+        // 对象格式的json数据
+        var sjson1='{"name":"张三", "age":20}';
+        // 把json数据转化成javascript对象
+        var oPerson = JSON.parse(sjson1);
+        console.log(oPerson)
+
+        // 回去对象属性
+        console.log(oPerson.name+oPerson.age)
+
+        // 数组格式的json数据
+        var sjson2='[{"name":"李四", "age":20},{"name":"张三", "age":20}]';
+        // 把json数据转换成
+        var aArray = JSON.parse(sjson2);
+        console.log(aArray);
+        console.log(aArray[1].name);
+        
+
+        // 扩展：浏览器给python服务器的json数据，python服务器程序可以解析成字典或列表
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
